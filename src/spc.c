@@ -1,6 +1,6 @@
 /* 
     SuperCat - The Super Cat Colorizer
-    Copyright (C) 2007-2008 - Thomas G. Anderson
+    Copyright (C) 2007-2015 - Mark P. Anderson, Thomas G. Anderson
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -30,7 +30,7 @@ struct spc_s {
     char    aryidx;  /* array index 1-255, 0=default */
     char    colour;  /* enum */
     char    attrib;  /* -, b, i, u */
-    char    patype;  /* c, s, r, t */
+    char    patype;  /* c, s, r, R, t */
 };
 
 spc_t Spc [NREGEX+1];   /* 0 is default */
@@ -78,9 +78,9 @@ help ()
 void
 version ()
 {
-    printf ("spc (The SuperCat Colorizer) Version %s February 15, 2008", VERSION);
+    printf ("spc (The SuperCat Colorizer) Version %s November 7, 2015", VERSION);
     puts   ("");
-    puts   ("Copyright (C) 2007-2008 - Thomas G. Anderson");
+    puts   ("Copyright (C) 2007-2015 - Mark P. Anderson, Thomas G. Anderson");
     puts   ("This is free software; see the source for copying conditions.  There is NO");
     puts   ("warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.");
     exit   (0);
@@ -475,6 +475,7 @@ patype_lookup (char chr)
     if (chr == ' ') return (PATYPE_REGEXP);
     if (chr == 'c') return (PATYPE_CHARS);
     if (chr == 'r') return (PATYPE_REGEXP);
+    if (chr == 'R') return (PATYPE_RECASE);
     if (chr == 's') return (PATYPE_STRING);
     if (chr == 't') return (PATYPE_UNIXTM);
     err_quit ("unknown pattern type %c at line number %d", chr, inp_lineno);
@@ -629,7 +630,7 @@ colour_sca (char *string, char *aryidx, int n)
      */
     for (spc=Spc, r=0; r<Spn; r++, spc++) {
 
-        if (spc->patype == PATYPE_REGEXP)
+        if (spc->patype == PATYPE_REGEXP || spc->patype == PATYPE_RECASE)
             rtn |= colour_rex (spc, string, aryidx, n);
         else if (spc->patype == PATYPE_STRING)
             rtn |= colour_str (spc, string, aryidx, n);
@@ -807,6 +808,15 @@ create_rex (FILE *fp)
              *  Compile the regular expression
              */
             if ((n = regcomp (&spc->buffer, buffer+COLUMN_CREGEX, REG_EXTENDED))) {
+                fprintf (stderr, "regcomp error: %s\n", buffer+COLUMN_CREGEX);
+                regerror (n, &spc->buffer, buffer, sizeof (buffer));
+                err_quit ("%s", buffer);
+            }
+        } else if (spc->patype == PATYPE_RECASE)  {
+            /*
+             *  Compile the case-insensitive regular expression
+             */
+            if ((n = regcomp (&spc->buffer, buffer+COLUMN_CREGEX, REG_EXTENDED|REG_ICASE))) {
                 fprintf (stderr, "regcomp error: %s\n", buffer+COLUMN_CREGEX);
                 regerror (n, &spc->buffer, buffer, sizeof (buffer));
                 err_quit ("%s", buffer);

@@ -1,6 +1,6 @@
 /* 
     SuperCat - The Super Cat Colorizer
-    Copyright (C) 2007 - Thomas G. Anderson
+    Copyright (C) 2007-2015 - Mark P. Anderson, Thomas G. Anderson
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -66,7 +66,8 @@
 
 #define PATYPE_CHARS    'c'
 #define PATYPE_STRING   's'
-#define PATYPE_REGEXP   'r'
+#define PATYPE_REGEXP   'r'	// case   sensitive RE
+#define PATYPE_RECASE   'R'	// case insensitive RE
 #define PATYPE_UNIXTM   't'
 
 #define COLUMN_HTMRGB  0

@@ -1,4 +1,4 @@
-AC_INIT(supercat, 0.5.5, bug-spc@nosredna.net)
+AC_INIT(supercat, 0.5.6, bug-spc@nosredna.net)
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 AC_LANG([C])
 AC_PROG_CC

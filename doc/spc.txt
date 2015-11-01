@@ -19,9 +19,10 @@
 #  T          - type of matching to perform
 #                 'c' : characters
 #                 's' : string
-#                 'r' : regex
+#                 'r' : regex - case   sensitive
+#                 'R' : regex - case insensitive
 #                 't' : regex with Unix time conversion
-#                 ' ' : default (regex)
+#                 ' ' : default ('r' regex)
 #        1         2         3         4         5
 #2345678901234567890123456789012345678901234567890123456789
 # HTML COLOR         COL A N T STRING or REGULAR EXPRESSION
