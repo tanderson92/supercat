@@ -1,0 +1,6 @@
+#  HTML COLOR NAME   COL A N T STRING or REGULAR EXPRESSION
+#################### ### # # # ################################################################
+Green                grn       (\[[^]]+\])
+Red                  red       (\[(error|warning|info)\])
+Brown                yel       ([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})
+Cyan                 cya       (referer\: .*)

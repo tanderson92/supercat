@@ -1,0 +1,6 @@
+#  HTML COLOR NAME   COL A N T STRING or REGULAR EXPRESSION
+#################### ### # # # ################################################################
+Green                grn       (\[[^]]+\])
+Red                  red       (^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})
+Blue                 blu       ((GET|POST|HEAD)\ [^\ ]+)
+Brown                yel       ((PROPFIND|REPORT)\ [^\ ]+)

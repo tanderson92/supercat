@@ -1,0 +1,40 @@
+#
+#   spc configuration file
+#
+# col - color (blk, red, grn, yel, blu, mag, cya, whi)
+#
+#   a - color attribute (console_code)
+#         ' ':normal          (0)
+#         '-':normal          (0)
+#         'b':bold            (1)
+#         'u':underline       (4)
+#         'r':reverse-video   (7)
+#         'k':blink           (5)
+#
+#   n - number of matches,  (' ':1, '1'-'9':1-9, '0':all)
+#
+#   t - pattern type
+#         'c':chars     (strchr)
+#         's':string    (strstr)
+#         't':regexp    (regcomp) (convert 10-digit unix time to MMDDHHMMSS)
+#         'r':regexp    (regcomp)
+#         ' ':regexp    (regcomp)
+#
+#                    col a n t pattern
+#################### ### # # # ########################################
+Green                grn - 1 r >>> (emerge.*$)
+Yellow               yel -   s >>>
+White                whi b   s ===
+Magenta              mag b   r (Sync comp.*$)
+Cyan                 cya -   r \*\*\* (.*$)
+Cyan                 cya b 1 s Started emerge on
+Yellow               yel - 1 r (AUTOCLEAN.*$)
+Magenta              mag - 1 r (Starting r.*$)
+Red                  red - 1 r ([0-9][0-9]):([0-9][0-9]):([0-9][0-9])
+Red                  red -   r Merging (.*$)
+Red                  red -   r Cleaning (\(.*$)
+Green                grn -   r Cleaning \(
+Green                grn -   s Compiling/Merging
+Green                grn b   s Unmerging...
+Red                  red b   r Unmerging... (.*$)
+White                whi     t ^([0-9]{10})

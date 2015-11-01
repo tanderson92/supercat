@@ -1,0 +1,13 @@
+#  HTML COLOR NAME   COL A N T STRING or REGULAR EXPRESSION
+#################### ### # # # ################################################################
+Green                grn       (.*)
+Brown                yel       (Section.*)
+Brown                yel       (SubSection.*)
+Brown                yel       (EndSection)
+Brown                yel       (EndSubSection)
+Red                  red       (")
+Red                  red       "(.*)"
+Magenta              mag       (true|True|false|False)
+Red                  red       ([0-9])
+Red                  red       (-|\.)
+Blue                 blu       (#.*)

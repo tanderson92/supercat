@@ -1,0 +1,173 @@
+2008-02-16 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Add spc config files for Apache error and 
+	access logs. Thanks to Angelo Arrifano(miknix)
+	for providing the files.
+
+2008-02-15 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Update Copyright dates. Preparation for
+	0.5.5 release.
+
+2008-02-15 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Change type of htmlen to size_t.(by tcunha)
+
+2008-02-15 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Fix possible memory leak in configure().
+	Thanks to Tiago Cunha(tcunha) for pointing
+	out the error.
+
+2008-02-14 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Minor code cleanups by Tiago Cunha(tcunha).
+
+2007-12-18 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Fix up finalize_con() so that it
+	correctly resets the colors back to
+	defaults.
+
+2007-12-08 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Preparation for 0.5.4 release.
+
+2007-12-08 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Change spcrc-svn so that it correctly
+	colors svn ouput that uses spaces.
+
+2007-11-17 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Add spcrc-svn file to color subversion
+	output.
+
+2007-11-17 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Correct hyphen usage in man page thanks
+	to Debian maintainer Kumar Appaiah.
+
+2007-10-02 Thomas Anderson <gentoofan23@gmail.com>
+
+	* In C language colorization file use Brown
+	instead of Yellow for html colors.
+
+2007-10-02 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Preparation for 0.5.3 release.
+
+2007-10-02 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Replace html entities(&,<,>,',") with html
+	codes. Thanks to Dawid Weglinske(cla) in 
+	Gentoo bug #194368.
+
+2007-10-01 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Add 'w' and 'R' to getopt code so that the
+	short versions of --webpage and --nohomerc
+	work correctly. Thanks to Dawid(cla) in 
+	Gentoo bug #194368.
+
+2007-09-28 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Preparation for 0.5.2 release.
+	
+2007-09-27 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Change version() to use VERSION instead of
+	hardcoded numbers.
+
+2007-09-27 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Update Makefile.in. Fix bogus date in ChangeLog.
+
+2007-09-27 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Add Xorg configuration file colorization file.
+
+2007-09-17 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Make colors for diff/patch less annoying in
+	web mode.
+
+2007-09-16 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Added Gentoo Configuration(/etc/conf.d/) file
+	support.
+
+2007-09-13 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Add GNU-style ChangeLog colorization support.
+
+2007-09-13 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Add ChangeLog to SVN.
+
+2007-09-09 Thomas Anderson <gentoofan23@gmail.com>
+	
+	* Add diff/patch colorization support. 
+
+2007-08-26 Thomas Anderson <gentoofan23@gmail.com>
+	
+	* Update version in preparation for 0.5.1.
+
+2007-08-26 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Fix invalid DESTDIR handling.
+
+2007-08-26 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Add DESTDIR checking for spcrc files.
+
+2007-08-25 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Make information in 'spc -S' more readable.
+
+2007-08-25 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Add check for C Constant default values.
+
+2007-08-25 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Installation directory support for spcrc support.
+	  --with-system-directory=dir now points supercat
+	  to the correct dir. Default=/etc/supercat.
+
+2007-08-25 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Really add autoconf checks for strerror.
+
+2007-08-25 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Add autoconf checking for sterror.
+
+2007-08-24 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Refactoring of options code. Checks for getopt(3)
+	on the system. If not present enables non-getopt code.
+
+2007-08-23 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Fix segmentation fault in option processing.
+
+2007-08-23 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Remove unnecessary files from SVN.
+
+2007-08-21 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Really add autogen.sh to SVN.
+
+2007-08-21 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Add autogen.sh to SVN.
+
+2007-08-21 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Remove 'configure' from SVN.
+
+2007-08-19 Thomas Anderson <gentoofan23@gmail.com>
+
+	* Add error processing code. Patch from Tiago Cunha.

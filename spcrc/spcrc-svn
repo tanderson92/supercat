@@ -1,0 +1,7 @@
+#  HTML COLOR NAME   COL A N T STRING or REGULAR EXPRESSION
+#################### ### # # # ################################################################
+Cyan                 cya       (^U.*)
+Green                grn       (^A.*)
+Red                  red       (^C.*)
+Purple               mag       (^D.*)
+Brown                yel       (^G.*)

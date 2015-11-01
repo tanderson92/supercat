@@ -1,0 +1,4 @@
+bin_PROGRAMS = spc
+spc_SOURCES = spc.c
+noinst_HEADERS = spc.h
+DEFS= -DHAVE_CONFIG_H -DSYSTEM_DIRECTORY=\"$(SYSTEM_DIRECTORY)\"
